@@ -16,6 +16,13 @@ class LinkedList<Object> {
     }
   }
 
+  public void add(Object data, int index) {
+    ListNode<Object> node = getNodeAtIndex(this.first, index);
+    if (node != null) {
+      node.data = data;
+    }
+  }
+
   public Object get(int index) {
     ListNode<Object> node = getNodeAtIndex(this.first, index);
     if (node == null) {
@@ -39,6 +46,5 @@ class LinkedList<Object> {
     }
     return node;
   }
-
 }
 

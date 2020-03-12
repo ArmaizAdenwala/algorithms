@@ -9,5 +9,8 @@ class LinkedListMain {
     System.out.println(list.get(2));
     System.out.println(list.get(3));
     System.out.println(list.get(-1));
+
+    list.add(123, 2);
+    System.out.println(list.get(2));
   }
 }
