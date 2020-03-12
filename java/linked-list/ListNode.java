@@ -5,4 +5,7 @@ public class ListNode<Object> {
   public ListNode(Object data) {
     this.data = data;
   }
+  public String toString() {
+    return "[" + this.data + "]";
+  }
 }

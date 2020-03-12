@@ -31,6 +31,19 @@ class LinkedList<Object> {
     return node.data;
   }
 
+  public String toString() {
+    return toStringHelper(this.first);
+  }
+
+  private String toStringHelper(ListNode<Object> node) {
+    if (node == null) {
+      return "empty";
+    } else if (node.next == null) {
+      return "[" + node.data + "]";
+    }
+    return "[" + node.data + "] -> " + toStringHelper(node.next);
+  }
+
   private ListNode<Object> getNodeAtIndex(ListNode<Object> node, int index) {
     if (index < 0 || node == null) {
       return null;
