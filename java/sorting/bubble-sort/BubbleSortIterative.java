@@ -9,12 +9,12 @@ class BubbleSortIterative {
   }
 
   public static void bubbleSortIterative(int[] arr) {
-    for (int i = 0; i < arr.length - 1; i++) {
-      for (int k = 0; k < arr.length - 1 - i; k ++) {
-        if (arr[k] > arr[k + 1]) {
-          int firstVal = arr[k];
-          arr[k] = arr[k + 1];
-          arr[k + 1] = firstVal;
+    for (int step = 0; step < arr.length - 1; step++) {
+      for (int curIndex = 0; curIndex < arr.length - 1 - step; curIndex++) {
+        if (arr[curIndex] > arr[curIndex + 1]) {
+          int firstVal = arr[curIndex];
+          arr[curIndex] = arr[curIndex + 1];
+          arr[curIndex + 1] = firstVal;
         }
       }
     }
